@@ -1,5 +1,4 @@
-import Note from "./note";
-
+import Note from "./Note";
 
 const NotesList = () => {
   return (
