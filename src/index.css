@@ -30,7 +30,7 @@ code {
     minmax(280px, 1fr)
   ); /* 1fr means space available */
 }
-.note {
+.title {
   background-color: rgb(204, 218, 218);
   border-radius: 10px;
   /* this is the radius of the corners of the note */
@@ -54,3 +54,9 @@ code {
   justify-content: space-between;
   /* this makes the items in the note-footer to be displayed in a row */
 }
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

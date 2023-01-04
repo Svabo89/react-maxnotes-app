@@ -1,18 +1,37 @@
+import { useState } from "react";
 import NotesList from "./components/NotesList";
-import { useState } from "react"; // this provides a hook that allows us to use state in functional components
-import { nanoid } from "nanoid";// this provides a unique id for each note
+import { nanoid } from "nanoid";
 const App = () => {
-  const [notes, setNotes] = useState([{ //this function allows us to use state in functional components
-    id: nanoid(), // this provides a unique id for each note
-    titel: "My new note",
-    text: "This is my note",
-    date: "02/01/2023",
-  }]); // this is a hook that allows us to use state in functional components
+  const [notes, setNotes] = useState([
+    {
+      id: nanoid(),
+      header: "Works better in a array",
+      text: "This is my first note",
+      date: "02/01/2023",
+    },
+    {
+      id: nanoid(),
+      header: "dont you think Max?",
+      text: "This is my second note",
+      date: "02/01/2023",
+    },
+    {
+      id: nanoid(),
+      header: "still some work to do",
+      text: "This is my third note",
+      date: "02/01/2023",
+    },
+    {
+      id: nanoid(),
+      header: "But im getting there :)",
+      text: "This is my fourth note",
+      date: "02/01/2023",
+    },
+  ]);
   return (
     <div className="container">
-      <NotesList />
+      <NotesList notes={notes} />
     </div>
   );
 };
-
 export default App;
