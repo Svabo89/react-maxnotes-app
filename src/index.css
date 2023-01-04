@@ -37,8 +37,8 @@ code {
   /* this makes the items in the note to be displayed in a column */
   filter: drop-shadow(5px 5px 4px #0000004a); 
   /* this is the shadow of the note*/
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
   margin-top: 1rem;
 }
 .note-footer {
@@ -54,3 +54,4 @@ code {
   flex-direction: column;
   justify-content: space-between;
 }
+
