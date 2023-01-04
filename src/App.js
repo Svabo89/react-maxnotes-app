@@ -3,9 +3,6 @@ const App = () => {
   return (
     <div className="container">
       <NotesList />
-      <NotesList />
-      <NotesList />
-      <NotesList />
     </div>
   );
 };

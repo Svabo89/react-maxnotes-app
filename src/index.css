@@ -11,18 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.notes-list { 
+  display: grid;
+  /* this makes the items in the list to be displayed in a grid */
+  grid-gap: 1rem;
+   /* this is the space between the items in the list */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 1fr means space available */
+}
 .note {
   background-color: rgb(204, 218, 218);
-  margin-bottom: 10px;
   border-radius: 10px;
+   /* this is the radius of the corners of the note */
   padding: 1rem;
+   /* this is the space between the note and the text */
   min-height: 170px;
+    /* this is the minimum height of the note */
   display: flex;
+   /* this makes the items in the note to be displayed in a row */
   flex-direction: column;
-  justify-content: space-between;
+   /* this makes the items in the note to be displayed in a column */
+  justify-content:
+   space-between;
+   /* this makes the items in the note to be displayed in a column */
 }
 .note-footer {
   display: flex;
+   /* this makes the items in the note-footer to be displayed in a row */
   align-items: center;
+    /* this makes the items in the note-footer to be displayed in a row */
   justify-content: space-between;
+   /* this makes the items in the note-footer to be displayed in a row */
 }
