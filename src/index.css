@@ -18,7 +18,7 @@ code {
    /* this is the space between the items in the list */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 1fr means space available */
 }
-.note {
+.title {
   background-color: rgb(204, 218, 218);
   border-radius: 10px;
    /* this is the radius of the corners of the note */
