@@ -22,7 +22,8 @@ code {
   ); /* 1fr means space available */
 }
 .title {
-  background-color: rgb(204, 218, 218);
+  /*background-color: rgb(204, 218, 218);*/
+  background: linear-gradient(#f69d3c, #3f87a6);
   border-radius: 10px;
   /* this is the radius of the corners of the note */
   padding: 1rem;
@@ -40,6 +41,14 @@ code {
   margin-left: 1.1rem;
   margin-right: 1.1rem;
   margin-top: 1rem;
+  
+}
+h3{
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 .note-footer {
   display: flex;
@@ -53,5 +62,14 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.note-footer small {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+.delete-icon {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
