@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Input(props) {
+function Input(submitNote, onAdd) {
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -15,13 +15,17 @@ function Input(props) {
       };
     });
   }
+  function submitNote(event) {
+    onAdd(note);
+    event.preventDefault();
+  }
   return (
     <div>
       <form>
         <input
-          value={note.title}
+          value={note.title} 
           type="text"
-          placeholder="Title of MaxNote..."
+          placeholder="Title"
           name="title"
           onChange={handleChange}
         />
@@ -29,12 +33,12 @@ function Input(props) {
           <textarea
             value={note.content}
             name="content"
-            placeholder="Write your note here..."
+            placeholder="Take a note..."
             onChange={handleChange}
           >
-            {""}
           </textarea>
         </p>
+        <button onClick={submitNote}>Close</button>
       </form>
     </div>
   );

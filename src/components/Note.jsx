@@ -1,10 +1,10 @@
 import React from "react";
 
-function Note(props){
+function Note(title, content, id) {
   return (
     <div className="note">
-      <h1>MaxNote</h1>
-      <p>may first note </p>
+      <h1>{title}</h1>
+      <p>{content}</p>
     </div>
   );
 };
