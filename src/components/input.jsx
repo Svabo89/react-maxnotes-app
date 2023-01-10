@@ -1,14 +1,20 @@
 import React from "react";
 import { useState } from "react";
 
-const Input = () => {
+function Input(props) {
   const [note, setNote] = useState({
     title: "",
     content: "",
   });
-  const handleChange = (e) => {
-    console.log(e);
-  };
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setNote((preValue) => {
+      return {
+        ...preValue,
+        [name]: value,
+      };
+    });
+  }
   return (
     <div>
       <form>
@@ -22,7 +28,7 @@ const Input = () => {
         <p>
           <textarea
             value={note.content}
-            name="note"
+            name="content"
             placeholder="Write your note here..."
             onChange={handleChange}
           >
@@ -32,6 +38,6 @@ const Input = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Input;

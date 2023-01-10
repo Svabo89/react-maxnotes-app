@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+function Header(props) {
   const logo = (
     <img
       src="https://www.scheer-group.com/typo3conf/ext/sitepackage/Resources/Public/Images/scheer-logo.svg"

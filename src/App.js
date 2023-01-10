@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Input from "./components/input";
 import Note from "./components/Note";
-const App = () => {
+function App(props) {
   return (
     <div>
       <Header />
