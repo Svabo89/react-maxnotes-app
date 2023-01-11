@@ -20,7 +20,7 @@ const App = () => {
    return (
      <div className="App">
        <Header />
-       <CreateArea onAdd={addNote} />
+       <Input onAdd={addNote} />
        {notes.map((note, index) => (
          <Note
            key={index}
