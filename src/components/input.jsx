@@ -7,6 +7,7 @@ function Input({ onAdd }) {
   const [note, setNote] = useState({
     title: "",
     content: "",
+    isInEditMode: false
   });
 
   function handleChange(e) {
