@@ -7,5 +7,5 @@ function Note(title, content, id) {
       <p>{content}</p>
     </div>
   );
-};
+}
 export default Note;
