@@ -1,11 +1,15 @@
 import React from "react";
 import { useState } from "react";
 
-function Input(submitNote, onAdd) {
+function Input({ onAdd }) {
+  const [isExpanded, setExpanded] = useState(false);
+
   const [note, setNote] = useState({
     title: "",
     content: "",
+    isInEditMode: false
   });
+
   function handleChange(e) {
     const { name, value } = e.target;
     setNote((preValue) => {
@@ -15,28 +19,40 @@ function Input(submitNote, onAdd) {
       };
     });
   }
+  function handleExpanded() {
+    setExpanded(true);
+  }
+
   function submitNote(event) {
     onAdd(note);
+    setNote({
+      title: "",
+      content: "",
+    });
     event.preventDefault();
   }
+
   return (
     <div>
       <form>
-        <input
-          value={note.title} 
-          type="text"
-          placeholder="Title"
-          name="title"
-          onChange={handleChange}
-        />
+        {isExpanded && (
+          <input
+            value={note.title}
+            type="text"
+            placeholder="Title"
+            name="title"
+            onChange={handleChange}
+          />
+        )}
         <p>
           <textarea
             value={note.content}
+            onClick={handleExpanded}
             name="content"
             placeholder="Take a note..."
             onChange={handleChange}
-          >
-          </textarea>
+            rows={isExpanded ? 3 : 1}
+          ></textarea>
         </p>
         <button onClick={submitNote}>Close</button>
       </form>
