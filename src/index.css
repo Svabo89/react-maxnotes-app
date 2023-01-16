@@ -32,7 +32,7 @@ img {
 form {
   position: relative;
   width: 600px;
-  margin: 35px auto 50px auto;
+  margin: 0px auto 50px auto;
   background: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -113,4 +113,12 @@ form button {
   cursor: pointer;
   outline: none;
   margin-right: 10px;
+}
+.trash {
+  margin: auto -10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
 }
