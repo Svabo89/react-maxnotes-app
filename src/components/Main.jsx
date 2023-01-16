@@ -1,5 +1,8 @@
+import menuBar from "./menu";
 const Main = () => {
-  return "hello world";
+  return (
+  <menuBar/>
+  )
 };
 
 export default Main;
